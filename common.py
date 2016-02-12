@@ -111,21 +111,6 @@ def printTags(awsregion, filters=False, ccFilters=False):
             if "costCenter" in filters:
                 if instance.tags['CostCenter'] in ccFilters:
                     print "Cost Center: " + instance.tags['CostCenter'] + '\n'
-        if instance.tags['Production']:
-            if "prod" not in filters:
-                print "Is this a Production server:  " + instance.tags['Production'] + '\n'
-        if instance.tags['Beta']:
-            if "beta" not in filters:
-                print "Is this a Beta server: " + instance.tags['Beta'] + '\n'
-        if instance.tags['Development']:
-            if "dev" not in filters:
-                print "Is this a Development server: " + instance.tags['Development'] + '\n'
-        if instance.tags['Tower']:
-            if "tower" not in filters:
-                print "Is this Tower managed: " + instance.tags['Tower'] + '\n'
-        if instance.tags['Octopus']:
-            if "octopus" not in filters:
-                print "Is this Octopus managed: " + instance.tags['Octopus'] + '\n'
 
 
 def get_account_number():
